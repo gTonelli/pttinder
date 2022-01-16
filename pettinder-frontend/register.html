@@ -10,9 +10,9 @@
 		<meta name="keywords" content="pets, dogs, playdates, meet people, meet dogs">
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/nav.css">
-		<link rel="stylesheet" href="css/form.css">
+		<link rel="stylesheet" href="css/register.css">
 		<!-- Swiper -->
-		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+		<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,157 +42,162 @@
 		</nav>
 
 		<!-- Registration Form -->
-		<form method="POST" id="registration-form" onsubmit="return validate()">
-			<fieldset id="identifying-information">
-				<legend>Identifying Information</legend>
 
-				<div>
-					<label for="email">Email</label>
-					<input type="email" name="email" id="email" required>
-				</div>
-
-				<div>
-					<label for="password">Password</label>
-					<input type="password" name="password" id="password" required>
-				</div>
-
-				<div>
-					<label for="user-name">User's Name</label>
-					<input type="text" name="user-name" id="user-name" required>
-				</div>
-
-				<div>
-					<label for="description">Provide a short description:</label>
-					<textarea rows="5" cols="60" name="description" id="description" placeholder="max 200 characters" maxlength="200" required></textarea>
-				</div>
-
-				<div>
-					<label for="user-image">Upload Image</label>
-					<input type="file" name="user-image" id="user-image" required>
-				</div>
-			</fieldset>
-
-			<fieldset id="location-information">
-				<legend>Location Information</legend>
-
-				<div>
-					<label for="postal-code">Postal/Zip Code</label>
-					<input type="text" name="postal-code" id="postal-code" required>
-				</div>
-
-				<div>
-					<label for="phone">Phone (optional)</label>
-					<input type="tel" name="phone" id="phone">
-				</div>
-			</fieldset>
-
-			<fieldset id="preferences">
-				<legend>Preferences:</legend>
-
-				<fieldset class="pet-ownership-wrapper">
-					<legend>Pet ownership:</legend>
-
-					<div class="pet-ownership">
-						<input type="checkbox" name="pet-owner" id="pet-owner" value="pet-owner">
-						<label for="pet-owner">Do you have a pet?</label>
+		<div class="registration-container">
+			<form method="POST" id="registration-form" onsubmit="return validate()" >
+				<fieldset id="identifying-information">
+					<legend>Identifying Information</legend>
+	
+					<div>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" required>
 					</div>
-
-					<fieldset class="unlockable-pet-options">
-						<legend>Select Pet Options:</legend>
-
-						<div>
-							<label for="pet-type">What type of pet do you have?</label>
-							<select name="pet-options" id="pet-type" disabled> <!-- Make required when enabled -->
-								<option value="dog">Dog</option>
-								<option value="cat">Cat</option>
-								<option value="pig">Pig</option>
-								<option value="bird">Bird</option>
-							</select>
+	
+					<div>
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" required>
+					</div>
+	
+					<div>
+						<label for="user-name">User's Name</label>
+						<input type="text" name="user-name" id="user-name" required>
+					</div>
+	
+					<div>
+						<label for="description">Provide a short description:</label>
+						<textarea rows="5" cols="60" name="description" id="description" placeholder="max 200 characters" maxlength="200" required></textarea>
+					</div>
+	
+					<div>
+						<label for="user-image">Upload Image</label>
+						<input type="file" name="user-image" id="user-image" required>
+					</div>
+				</fieldset>
+	
+				<fieldset id="location-information">
+					<legend>Location Information</legend>
+	
+					<div>
+						<label for="postal-code">Postal/Zip Code</label>
+						<input type="text" name="postal-code" id="postal-code" required>
+					</div>
+	
+					<div>
+						<label for="phone">Phone (optional)</label>
+						<input type="tel" name="phone" id="phone">
+					</div>
+				</fieldset>
+	
+				<fieldset id="preferences">
+					<legend>Preferences:</legend>
+	
+					<fieldset class="pet-ownership-wrapper">
+						<legend>Pet ownership:</legend>
+	
+						<div class="pet-ownership">
+							<input type="checkbox" name="pet-owner" id="pet-owner" value="pet-owner">
+							<label for="pet-owner">Do you have a pet?</label>
 						</div>
-
-						<div>
-							<label for="pet-name">Pet Name</label>
-							<input type="text" name="pet-options" id="pet-name" disabled>
-						</div>
-
-						<div>
-							<input class="checkable-pet-options" type="checkbox" name="pet-options" id="looking-for-playdate" value="looking-for-playdate" disabled>
-							<label for="looking-for-playdate">Do you want to find a playdate for your pet?</label>
-						</div>
-
-						<div>
-							<input class="checkable-pet-options" type="checkbox" name="pet-options" id="looking-for-parent" value="looking-for-parent" disabled>
-							<label for="looking-for-parent">Do you want to find a new parent for your pet?</label>
+	
+						<fieldset class="unlockable-pet-options">
+							<legend>Select Pet Options:</legend>
+	
+							<div>
+								<label for="pet-type">What type of pet do you have?</label>
+								<select name="pet-options" id="pet-type" disabled> <!-- Make required when enabled -->
+									<option value="dog">Dog</option>
+									<option value="cat">Cat</option>
+									<option value="pig">Pig</option>
+									<option value="bird">Bird</option>
+								</select>
+							</div>
+	
+							<div>
+								<label for="pet-name">Pet Name</label>
+								<input type="text" name="pet-options" id="pet-name" disabled>
+							</div>
+	
+							<div>
+								<input class="checkable-pet-options" type="checkbox" name="pet-options" id="looking-for-playdate" value="looking-for-playdate" disabled>
+								<label for="looking-for-playdate">Do you want to find a playdate for your pet?</label>
+							</div>
+	
+							<div>
+								<input class="checkable-pet-options" type="checkbox" name="pet-options" id="looking-for-parent" value="looking-for-parent" disabled>
+								<label for="looking-for-parent">Do you want to find a new parent for your pet?</label>
+							</div>
+						</fieldset>
+					</fieldset>
+	
+					<fieldset class="dating-wrapper">
+						<legend>Dating:</legend>
+	
+						<div class="dating">
+							<input type="checkbox" name="looking-for-date" id="looking-for-date" value="looking-for-date">
+							<label for="looking-for-date">Are you looking for a human date?</label>
 						</div>
 					</fieldset>
-				</fieldset>
-
-				<fieldset class="dating-wrapper">
-					<legend>Dating:</legend>
-
-					<div class="dating">
-						<input type="checkbox" name="looking-for-date" id="looking-for-date" value="looking-for-date">
-						<label for="looking-for-date">Are you looking for a human date?</label>
-					</div>
-				</fieldset>
-				
-				<fieldset class="services-wrapper">
-					<legend>Services:</legend>
 					
-					<div class="services">
-						<input type="checkbox" name="services" id="services" value="services">
-						<label for="services">Are you offering pet services?</label>
-					</div>
-
-					<fieldset class="unlockable-service-options">
-						<legend>Select at least one Service Option:</legend>
-
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-groomer" value="pet-groomer" disabled>
-							<label for="pet-groomer">Pet Grooming</label>
+					<fieldset class="services-wrapper">
+						<legend>Services:</legend>
+						
+						<div class="services">
+							<input type="checkbox" name="services" id="services" value="services">
+							<label for="services">Are you offering pet services?</label>
 						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-walker" value="pet-walker" disabled>
-							<label for="pet-walker">Pet Walker</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-trainer" value="pet-trainer" disabled>
-							<label for="pet-trainer">Pet Trainer</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-sitter" value="pet-sitter" disabled>
-							<label for="pet-sitter">Pet Sitter</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-daycare" value="pet-daycare" disabled>
-							<label for="pet-daycare">Pet Daycare</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-foods" value="pet-foods" disabled>
-							<label for="pet-foods">Pet Foods</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-products" value="pet-products" disabled>
-							<label for="pet-products">Pet Products</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-mobile-clinic" value="pet-mobile-clinic" disabled>
-							<label for="pet-mobile-clinic">Pet Mobile Clinic</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="veterinarian" value="veterinarian" disabled>
-							<label for="veterinarian">Veterinarian</label>
-						</div>
-						<div>
-							<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-radio-show" value="pet-radio-show" disabled>
-							<label for="pet-radio-show">Pet Radio Show</label>
-						</div>
+	
+						<fieldset class="unlockable-service-options">
+							<legend>Select at least one Service Option:</legend>
+	
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-groomer" value="pet-groomer" disabled>
+								<label for="pet-groomer">Pet Grooming</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-walker" value="pet-walker" disabled>
+								<label for="pet-walker">Pet Walker</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-trainer" value="pet-trainer" disabled>
+								<label for="pet-trainer">Pet Trainer</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-sitter" value="pet-sitter" disabled>
+								<label for="pet-sitter">Pet Sitter</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-daycare" value="pet-daycare" disabled>
+								<label for="pet-daycare">Pet Daycare</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-foods" value="pet-foods" disabled>
+								<label for="pet-foods">Pet Foods</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-products" value="pet-products" disabled>
+								<label for="pet-products">Pet Products</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-mobile-clinic" value="pet-mobile-clinic" disabled>
+								<label for="pet-mobile-clinic">Pet Mobile Clinic</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="veterinarian" value="veterinarian" disabled>
+								<label for="veterinarian">Veterinarian</label>
+							</div>
+							<div>
+								<input class="checkable-service-options" type="checkbox" name="service-options" id="pet-radio-show" value="pet-radio-show" disabled>
+								<label for="pet-radio-show">Pet Radio Show</label>
+							</div>
+						</fieldset>
 					</fieldset>
-				</fieldset>
-			</fieldset>
+	
+					<input type="submit" id="submit_form" value="Register">
+				</fieldset>			
+			</form>
+		</div>
 
-			<input type="submit" id="submit_form" value="Register">
-		</form>
+		
 
 		<!--Form Logic-->
 		<script src="js/validate-form.js" type="text/javascript"></script>

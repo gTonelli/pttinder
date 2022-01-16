@@ -1,0 +1,28 @@
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+/* form input{
+    width: 50%;
+    height: 25px;
+    border-radius: 2%;
+    border: 2px solid #b36a6a;
+    border-bottom: 3px solid #831e1e;
+    padding-left: 8px;
+} */
+
+.registration-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    border-radius: 3%;
+    background: rgb(255, 227, 253);
+}
+
