@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Pet Harmony">
+        <meta name="author" content="Jeff Antoun">
+        <meta name="description" content="Prototype for Pet Harmony's 'Services' page ">
+        <meta name="keywords" content="pets, dogs, Shiba Inu, meet people, meet dogs">
+        <link rel="stylesheet" href="../public/css/base.css">
+        <link rel="stylesheet" href="../public/css/nav.css">
+        <link rel="stylesheet" href="../public/css/services-page-header.css">
+        <link rel="stylesheet" href="../public/css/services-page.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Questrial&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/7905e3a2f6.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <!-- Navigation-->
+    <nav>
+    
+        <div class="img-wrapper">
+            <img src="../public/media/petharmony-logo.png" alt="Pet Harmony Logo - Picture of" />
+        </div>
+        
+        <div id="mobile-nav-menu" data-open=false class="nav-wrapper-mid desktop-only">
+
+            <a class="nav-link" href="index.html">
+                Home
+            </a>
+            
+            <a class="nav-link" href="">
+            Shiba Inu
+            </a>
+    
+            <a class="nav-link" href="">
+            Services
+            </a>
+    
+            <a class="nav-link" href="adoption.html">
+            Adoption
+            </a>
+            
+            <a class="nav-link mobile-only" href="">
+            Sign-In
+            </a>
+    
+        </div>
+    
+        <div class="nav-wrapper-right">
+            
+            <i class="fas fa-bars mobile-only" id="mobile-nav-icon"></i>
+            
+            <a class="nav-link desktop-only" href="">
+            Sign-In
+            </a>
+        </div>
+    </nav>
+
+    <!-- Search Field -->
+    <header>
+        <div class="hero-container">
+            <div class="search-container">
+                <div class="search-services">
+                    <h1 class="title">Find a pet service</h1>
+                    <form action="">
+                        <div class="search-options">
+                            <div class="category">
+                                <label for="service">Select a pet service</label>
+                                <select id="service" name="service-options"> <!-- Make required when enabled -->
+                                    <option hidden disabled selected value> -- select an option -- </option>
+                                    <option value="pet-groomer">Pet Groomer</option>
+                                    <option value="pet-walker">Pet Walker</option>
+                                    <option value="pet-trainer">Pet Trainer</option>
+                                    <option value="pet-sitter">Pet Sitter</option>
+                                    <option value="pet-daycare">Pet Daycare</option>
+                                    <option value="pet-foods">Pet Foods</option>
+                                    <option value="pet-products">Pet Products</option>
+                                    <option value="pet-mobile-clinic">Pet Mobile Clinic</option>
+                                    <option value="pet-veterinarian">Pet Veterinarian</option>
+                                    <option value="pet-radio-show">Pet Radio Show</option>
+                                </select>
+                            </div>
+                       
+                            <div class="input-box">
+                                <label for="service-provider">Name of provider</label>
+                                <input type="text" id="service-provider" name="service-provider" placeholder="optional">
+                            </div>
+
+                            <div class="search-radius">
+                                <label for="search-radius">Search Radius</label>
+                                <select class="" id="search-radius" name="service-options"> <!-- Make required when enabled -->
+                                    <option value="5km">5 km</option>
+                                    <option value="10km">10 km</option>
+                                    <option value="50km">50 km</option>
+                                    <option value="100km">100 km</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Adoption Page Content -->
+    <section class="page-content">
+
+        <section class="featured-container">
+            <h1>Featured Services</h1>
+
+            <div>
+                <h3>Your pet is more beautiful than you think</h3>
+
+                <div class="featured-services">
+                    <div class="service-description">
+                        <h4>Pet Grooming</h4>
+                        <p>Pet grooming refers to both the hygienic care and cleaning of a pet, as well as a process
+                            by which a pet's physical appearance is enhanced. Grooming is a vital part in the well-being
+                            and healthiness of a pet, which can improve its quality of life.
+                        </p>
+                    </div>
+                    <div class="service-picture">
+                        <img src="../public/media/shiba-inu-1.jpg" alt="A shiba inu" />
+                        <h5>Hair Removal</h5>
+                    </div>
+                    <div class="service-picture">
+                        <img src="../public/media/shiba-inu-1.jpg" alt="A shiba inu" />
+                        <h5>Bathing</h5>
+                    </div>
+                    <div class="service-picture">
+                        <img src="../public/media/shiba-inu-1.jpg" alt="A shiba inu" />
+                        <h5>Creative</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Find the potential of your pet</h3>
+
+                <div class="featured-services">
+                    <div class="service-description">
+                        <h4>Pet Training</h4>
+                        <p>Pet training is the application of behavioral analysis which uses the environmental events
+                            of antecedants and consequences to modify the pet's behaviour, either for it to assist in 
+                            specific activities or undertake particular tasks.
+                        </p>
+                    </div>
+                    <div class="service-picture">
+                        <img src="../public/media/shiba-inu-1.jpg" alt="A shiba inu" />
+                        <h5>Obedience</h5>
+                    </div>
+                    <div class="service-picture">
+                        <img src="../public/media/shiba-inu-1.jpg" alt="A shiba inu" />
+                        <h5>Agility</h5>
+                    </div>
+                    <div class="service-picture">
+                        <img src="../public/media/shiba-inu-1.jpg" alt="A shiba inu" />
+                        <h5>Behavioural</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Services -->
+        <section>
+            <h1>All Services</h1>
+
+            <div class="all-services">
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A shiba inu" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+        
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+        
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+            
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+            
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+    
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+    
+                <div class="services-card">
+                    <img src="../public/media/shiba-inu-1.jpg" alt="A vector graphic of a woman walking two dogs" />
+                    <h5>Shiba Inu</h5>
+                    <p>You and your furry friend can find the purrfect playdate! Check out our playdate app for free!</p>
+                    <a class="more-button button" href="">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </section>    
+</body>
+</html>
